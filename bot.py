@@ -55,11 +55,9 @@ async def op(_, m :Message):
             buttons = [[
                         InlineKeyboardButton("🗯 Channel", url="https://t.me/SDBOTs_inifinity"),
                         InlineKeyboardButton("💬 Support", url="https://t.me/SDBOTz")
-                    ],[
+                        ],[
                         InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/SDAutoApproveBot?startgroup")
-                    ]
-                ]
-            )
+                     ]]          
             add_user(m.from_user.id)
             reply_markup = InlineKeyboardMarkup(buttons)
             await message.reply(
