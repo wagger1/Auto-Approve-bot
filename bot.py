@@ -52,9 +52,7 @@ async def op(_, m :Message):
     try:
         await app.get_chat_member(cfg.CHID, m.from_user.id) 
         if m.chat.type == enums.ChatType.PRIVATE:
-            keyboard = InlineKeyboardMarkup(
-                [
-                    [
+            buttons = [[
                         InlineKeyboardButton("🗯 Channel", url="https://t.me/SDBOTs_inifinity"),
                         InlineKeyboardButton("💬 Support", url="https://t.me/SDBOTz")
                     ],[
@@ -63,8 +61,12 @@ async def op(_, m :Message):
                 ]
             )
             add_user(m.from_user.id)
-            await m.reply_photo("https://telegra.ph/file/a782e3bbbe40df8a4bb67.jpg", caption="**🦊 Hello {}!\nI'm an auto approve [Admin Join Requests]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\n__Powerd By : @SdBotz__**".format(m.from_user.mention, "https://t.me/telegram/153"), reply_markup=keyboard)
-    
+            reply_markup = InlineKeyboardMarkup(buttons)
+            await message.reply(
+            text="**🦊 Hello {}!\nI'm an auto approve Join Requests.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\n__Powerd By : @SdBotz__**".format(m.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML,
+           )
         elif m.chat.type == enums.ChatType.GROUP or enums.ChatType.SUPERGROUP:
             keyboar = InlineKeyboardMarkup(
                 [
