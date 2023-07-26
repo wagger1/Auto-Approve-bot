@@ -60,7 +60,7 @@ async def op(_, m :Message):
                      ]]          
             add_user(m.from_user.id)
             reply_markup = InlineKeyboardMarkup(buttons)
-            await message.reply(
+            await m.reply(
             text="**🦊 Hello {}!\nI'm an auto approve Join Requests.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\n__Powerd By : @SdBotz__**".format(m.from_user.mention),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML,
