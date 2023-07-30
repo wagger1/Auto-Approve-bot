@@ -37,8 +37,8 @@ async def approve(_, m : Message):
     buttons = [[
                  InlineKeyboardButton("🍷мαιи ϲнαииєℓ", url="https://t.me/CxMaxTG")
                  ],[
-                 InlineKeyboardButton("🏵 gяουρ 1", url="https://t.me/CinemaxpressTM"),
-                 InlineKeyboardButton("🏵 gяουρ 2", url="https://t.me/Cinemabasar")
+                 InlineKeyboardButton("🎯 gяουρ 1", url="https://t.me/CinemaxpressTM"),
+                 InlineKeyboardButton("🎯 gяουρ 2", url="https://t.me/Cinemabasar")
               ]]                      
     reply_markup = InlineKeyboardMarkup(buttons)
     try:
@@ -105,8 +105,8 @@ async def chk(_, cb : CallbackQuery):
                     [
                         InlineKeyboardButton("🍷мαιи ϲнαииєℓ", url="https://t.me/CxMaxTG")
                     ],[
-                        InlineKeyboardButton("🏵 gяουρ 1", url="https://t.me/CinemaxpressTM"),
-                        InlineKeyboardButton("🏵 gяουρ 2", url="https://t.me/Cinemabasar")
+                        InlineKeyboardButton("🎯 gяουρ 1", url="https://t.me/CinemaxpressTM"),
+                        InlineKeyboardButton("🎯 gяουρ 2", url="https://t.me/Cinemabasar")
                     ]
                 ]
             )
