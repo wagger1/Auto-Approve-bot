@@ -45,7 +45,7 @@ async def approve(_, m : Message):
         add_group(m.chat.id)
         await app.approve_chat_join_request(op.id, kk.id)
         img = random.choice(gif)
-        await app.send_message(kk.id, "**нєγ {} 🫂\γουя яєգυєѕτ το נοιи {}\n\nωαѕ αϲϲєρτє∂**".format(m.from_user.mention, m.chat.title), reply_markup=reply_markup)
+        await app.send_message(kk.id, "**нєγ {} 🫂\nγουя яєգυєѕτ το נοιи {}\n\nωαѕ αϲϲєρτє∂**".format(m.from_user.mention, m.chat.title), reply_markup=reply_markup)
         add_user(kk.id)
     except errors.PeerIdInvalid as e:
         print("user isn't start bot(means group)")
@@ -67,7 +67,7 @@ async def op(_, m :Message):
             add_user(m.from_user.id)
             reply_markup = InlineKeyboardMarkup(buttons)
             await m.reply(
-            text="**нєγ {} 🫂\nα∂∂ τнιѕ ϐοτ το γουя ϲнαииєℓѕ οя gяουρ το αϲϲєρτ נοιи яєգυєѕτѕ αυτοмατιϲαℓℓγ 😊\n\nѕнαяє αи∂ ѕυρροяτ υѕ 💪**".format(m.from_user.mention),
+            text="<b>нєγ {} 🫂\nα∂∂ τнιѕ ϐοτ το γουя ϲнαииєℓѕ οя gяουρ το αϲϲєρτ נοιи яєգυєѕτѕ αυτοмατιϲαℓℓγ 😊\n\nѕнαяє αи∂ ѕυρροяτ υѕ 💪</b>".format(m.from_user.mention),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML,
            )
@@ -80,7 +80,7 @@ async def op(_, m :Message):
                 ]
             )
             add_group(m.chat.id)
-            await m.reply_text("**🦊 Hello {}!\nwrite me private for more details**".format(m.from_user.first_name), reply_markup=keyboar)
+            await m.reply_text("**нєγ {} 🫂\nϲℓιϲκ ϐєℓοω το υѕє мє ☺🙈**".format(m.from_user.first_name), reply_markup=keyboar)
         print(m.from_user.first_name +" 🥵 мγяαи ѕταяτє∂")
 
     except UserNotParticipant:
