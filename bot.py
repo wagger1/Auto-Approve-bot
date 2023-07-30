@@ -35,17 +35,17 @@ async def approve(_, m : Message):
     op = m.chat
     kk = m.from_user
     buttons = [[
-                 InlineKeyboardButton("🗯 Channel", url="https://t.me/SDBOTs_inifinity"),
-                 InlineKeyboardButton("💬 Support", url="https://t.me/SDBOTz")
+                 InlineKeyboardButton("🍷мαιи ϲнαииєℓ", url="https://t.me/CxMaxTG")
                  ],[
-                 InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/SDAutoApproveBot?startgroup")
+                 InlineKeyboardButton("🏵 gяουρ 1", url="https://t.me/CinemaxpressTM"),
+                 InlineKeyboardButton("🏵 gяουρ 2", url="https://t.me/Cinemabasar")
               ]]                      
     reply_markup = InlineKeyboardMarkup(buttons)
     try:
         add_group(m.chat.id)
         await app.approve_chat_join_request(op.id, kk.id)
         img = random.choice(gif)
-        await app.send_message(kk.id, "**Hello {}!\nWelcome To {}\n\n__Powerd By : @SdBotz__**".format(m.from_user.mention, m.chat.title), reply_markup=reply_markup)
+        await app.send_message(kk.id, "**нєγ {} 🫂\γουя яєգυєѕτ το נοιи {}\n\nωαѕ αϲϲєρτє∂**".format(m.from_user.mention, m.chat.title), reply_markup=reply_markup)
         add_user(kk.id)
     except errors.PeerIdInvalid as e:
         print("user isn't start bot(means group)")
@@ -60,15 +60,14 @@ async def op(_, m :Message):
         await app.get_chat_member(cfg.CHID, m.from_user.id) 
         if m.chat.type == enums.ChatType.PRIVATE:
             buttons = [[
-                        InlineKeyboardButton("🗯 Channel", url="https://t.me/SDBOTs_inifinity"),
-                        InlineKeyboardButton("💬 Support", url="https://t.me/SDBOTz")
+                        InlineKeyboardButton("● α∂∂ мє το gяουρ οя ϲнαииєℓ ●", url="https://t.me/CxAutoBot?startgroup")
                         ],[
-                        InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/SDAutoApproveBot?startgroup")
-                     ]]          
+                        InlineKeyboardButton("🍷мαιи ϲнαииєℓ", url="https://t.me/CxMaxTG")
+                      ]]          
             add_user(m.from_user.id)
             reply_markup = InlineKeyboardMarkup(buttons)
             await m.reply(
-            text="**🦊 Hello {}!\nI'm an auto approve Join Requests.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\n__Powerd By : @SdBotz__**".format(m.from_user.mention),
+            text="**нєγ {} 🫂\nα∂∂ τнιѕ ϐοτ το γουя ϲнαииєℓѕ οя gяουρ το αϲϲєρτ נοιи яєգυєѕτѕ αυτοмατιϲαℓℓγ 😊\n\nѕнαяє αи∂ ѕυρροяτ υѕ 💪**".format(m.from_user.mention),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML,
            )
@@ -76,23 +75,23 @@ async def op(_, m :Message):
             keyboar = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("💁‍♂️ Start me private 💁‍♂️", url="https://t.me/SDAutoApproveBot?start=start")
+                        InlineKeyboardButton("🥵ϲℓιϲκ нєяє🥵", url="https://t.me/CxAutoBot?start=start")
                     ]
                 ]
             )
             add_group(m.chat.id)
             await m.reply_text("**🦊 Hello {}!\nwrite me private for more details**".format(m.from_user.first_name), reply_markup=keyboar)
-        print(m.from_user.first_name +" Is started Your Bot!")
+        print(m.from_user.first_name +" 🥵 мγяαи ѕταяτє∂")
 
     except UserNotParticipant:
         key = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🍀 Check Again 🍀", "chk")
+                    InlineKeyboardButton(" 💌 ᑕᕼᗴᑕᏦ ᗩᏀᗩᏆᑎ 💌  ", "chk")
                 ]
             ]
         )
-        await m.reply_text("**⚠️Access Denied!⚠️\n\nPlease Join @{} to use me.If you joined click check again button to confirm.**".format(cfg.FSUB), reply_markup=key)
+        await m.reply_text("**ѕοяяγ γου ∂ι∂и'τ נοιи мγ ϲнαииєℓ\n\nյօíղ հҽɾҽ 👉 @{} αƒτєя נοιиιиg ϲℓιϲκ τнє ϐєℓοω 💌 ϲнєϲκ αgαιи 💌 ϐυττοи 👇🏻**".format(cfg.FSUB), reply_markup=key)
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ callback ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -104,18 +103,18 @@ async def chk(_, cb : CallbackQuery):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🗯 Channel", url="https://t.me/SDBOTs_inifinity"),
-                        InlineKeyboardButton("💬 Support", url="https://t.me/SDBOTz")
+                        InlineKeyboardButton("🍷мαιи ϲнαииєℓ", url="https://t.me/CxMaxTG")
                     ],[
-                        InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/SDAutoApproveBot?startgroup")
+                        InlineKeyboardButton("🏵 gяουρ 1", url="https://t.me/CinemaxpressTM"),
+                        InlineKeyboardButton("🏵 gяουρ 2", url="https://t.me/Cinemabasar")
                     ]
                 ]
             )
             add_user(cb.from_user.id)
-            await cb.message.edit("**🦊 Hello {}!\nI'm an auto approve [Admin Join Requests]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\n__Powerd By : @SdBotz__**".format(cb.from_user.mention, "https://t.me/telegram/153"), reply_markup=keyboard, disable_web_page_preview=True)
-        print(cb.from_user.first_name +" Is started Your Bot!")
+            await cb.message.edit("**нєγ {} 🫂\nα∂∂ τнιѕ ϐοτ το γουя ϲнαииєℓѕ οя gяουρ το αϲϲєρτ נοιи яєգυєѕτѕ αυτοмατιϲαℓℓγ 😊\n\nѕнαяє αи∂ ѕυρροяτ υѕ 💪**".format(cb.from_user.mention, "https://t.me/telegram/153"), reply_markup=keyboard, disable_web_page_preview=True)
+        print(cb.from_user.first_name +" 🥵 мγяαи ѕταяτє∂")
     except UserNotParticipant:
-        await cb.answer("🙅‍♂️ You are not joined to channel join and try again. 🙅‍♂️")
+        await cb.answer("ᒍᝪᏆᑎ ᐯᖇᝪ 🥵")
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ info ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
